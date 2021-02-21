@@ -15,7 +15,7 @@ public class SingletonObject {
     public void setAttribute_B(int value){
         this.Attribute_B = value;
     }
-    public static SingletonObject getInstance(){
+    public static synchronized SingletonObject getInstance(){
         if(instance == null){
             instance = new SingletonObject();
             instance.Attribute_A = 1;
